@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="FireFox"/>
+  <test name="TestChrome">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testClass.TC001_SearchPhone_SnapDeal"/>
+    </classes>
+  </test> <!-- TestChrome -->
+  <test name="TestFirefox">
+    <parameter name="browser" value="FireFox"/>
+    <classes>
+      <class name="testClass.TC001_SearchPhone_SnapDeal"/>
+    </classes>
+  </test> <!-- TestFirefox -->
+  <test name="TestChrome(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testClass.TC001_SearchPhone_SnapDeal">
+        <methods>
+          <include name="searchFlightTest"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testClass.TC001_SearchPhone_SnapDeal -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+  <test name="TestFirefox(failed)">
+    <parameter name="browser" value="FireFox"/>
+    <classes>
+      <class name="testClass.TC001_SearchPhone_SnapDeal">
+        <methods>
+          <include name="searchFlightTest"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testClass.TC001_SearchPhone_SnapDeal -->
+    </classes>
+  </test> <!-- TestFirefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
